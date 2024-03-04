@@ -2,28 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  min-height: 100vh;
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+.image-container {
+  @apply relative h-[25vh] w-[25vw];
+}
+
+.image-container[data-container-i='2'] {
+  top: -30vh;
+  left: 5vw;
+  width: 35vw;
+  height: 30vh;
+}
+
+.image-container[data-container-i='3'] {
+  top: -10vh;
+  left: -25vw;
+  width: 20vw;
+  height: 45vh;
+}
+
+.image-container[data-container-i='4'] {
+  left: 27.5vw;
+  width: 25vw;
+  height: 25vh;
+}
+
+.image-container[data-container-i='5'] {
+  top: 27.5vh;
+  left: 5vw;
+  width: 20vw;
+  height: 25vh;
+}
+
+.image-container[data-container-i='6'] {
+  top: 27.5vh;
+  left: -22.5vw;
+  width: 30vw;
+  height: 25vh;
+}
+
+.image-container[data-container-i='7'] {
+  top: 22.5vh;
+  left: 25vw;
+  width: 15vw;
+  height: 15vh;
 }
 
 @layer utilities {
